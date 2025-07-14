@@ -13,7 +13,8 @@ while (!menu) {
         '2.Resta\n' +
         '3.Multiplicacion\n' +
         '4.Divicion\n' +
-        '5.Historial(Ultimas 5 operaciones)\n' 
+        '5.Historial(Ultimas 5 operaciones)\n' +
+        'Salir\n' 
     )
     
     switch(opciones) {
@@ -37,6 +38,10 @@ while (!menu) {
         case "5":
             alert(historial.join("\n"));
             break
+        case "Salir":
+            alert("Saliendo...")
+            menu = true
+            break
     }
 }
 
@@ -56,7 +61,7 @@ function Suma() {
     }
 
     let resultado = n1 + n2;
-    alert(resultado);
+    alert("Suma: " + n1 + " + " + n2 + "\n" + "Resultado: " + resultado + "\n");
 
     if (historial.length >= historialmMax) {
         historial.shift();
@@ -84,7 +89,7 @@ function Resta() {
     }
 
     let resultado = n1 - n2;
-    alert(resultado);
+    alert("Resta: " + n1 + " - " + n2 + "\n" + "Resultado: " + resultado + "\n");
 
     if (historial.length >= historialmMax) {
         historial.shift();
@@ -111,7 +116,7 @@ function Multiplicacion() {
     }
 
     let resultado = n1 * n2;
-    alert(resultado);
+    alert("Multipliacion: " + n1 + " * " + n2 + "\n" + "Resultado: " + resultado + "\n");
 
     if (historial.length >= historialmMax) {
         historial.shift();
@@ -138,7 +143,7 @@ function Divicion() {
     }
 
     let resultado = n1 / n2;
-    alert(resultado);
+    alert("Divicion: " + n1 + " / " + n2 + "\n" + "Resultado: " + resultado + "\n");
 
     if (historial.length >= historialmMax) {
         historial.shift();
